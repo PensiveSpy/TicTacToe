@@ -5,9 +5,17 @@ public class TicTacToe {
     int boardWidth = 1000;
     int boardHeight = 800;
 
-    JFrame frame = new JFrame();
+    JFrame frame = new JFrame("Tic-Tac-Toe Game");
     JLabel textLabel = new JLabel();
     JPanel textPanel = new JPanel();
+    JPanel boardPanel = new JPanel();
+
+    JButton [][] board = new JButton[4][4];
+    String playerX = "X";
+    String playerO = "0";
+    String playerY = "Y";
+
+    String currentPlayer = playerX;
 
     TicTacToe(){
         frame.setVisible(true);
@@ -27,6 +35,12 @@ public class TicTacToe {
         textPanel.add(textLabel);
         frame.add(textPanel, BorderLayout.NORTH);
 
+        boardPanel.setLayout(new GridLayout(4, 4));
+        boardPanel.setBackground(new Color(150, 200, 100));
+        frame.add(boardPanel);
 
+        for (int r = 0; r < 4; r++){
+            for (int)
+        }
     }
 }
