@@ -23,7 +23,9 @@ public class TicTacToe {
         textLabel.setText("Tic-Tac-Toe Game");
         textLabel.setOpaque(true);
 
-
+        textPanel.setLayout(new BorderLayout());
+        textPanel.add(textLabel);
+        frame.add(textPanel);
 
 
     }
