@@ -54,7 +54,10 @@ public class TicTacToe {
                 tile.addActionListener(new ActionListener() {
                     public void actionPerformed(ActionEvent e){
                         JButton tile = (JButton) e.getSource();
-                        tile.setText
+                        tile.setText(currentPlayer);
+
+                        currentPlayer = currentPlayer == playerX ? playerO : (currentPlayer == playerO ? playerY : playerX);
+                        textLabel.setText(currentPlayer + " 's turn.");
                     }
                 });
             }
