@@ -74,7 +74,7 @@ public class TicTacToe {
         }
     }
     void checkWinner(){
-        //Checking Horizontally
+        //Checking horizontally for winner
         for (int r = 0; r < 4; r++){
             if (board[r][0].getText() == "") continue;
 
@@ -88,6 +88,18 @@ public class TicTacToe {
             }
         }
 
+        //Checking vertically for winner
+        for (int c = 0; c < 4; c++){
+            if (board[0][c].getText() == "") continue;
+
+            if (board[0][c].getText() == board[1][c].getText() && board[1][c].getText() == board[2][c].getText()){
+                for (int i = 0; i < 4; i++){
+                    setWinner(board[i][c]);
+                }
+                gameOver = true;
+                return;
+            }
+        }
 
     }
     void setWinner(JButton tile){
