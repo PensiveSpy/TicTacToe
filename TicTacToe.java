@@ -51,6 +51,12 @@ public class TicTacToe {
                 tile.setFont(new Font("Times New Romans", Font.BOLD, 120));
                 tile.setFocusable(false);
 
+                tile.addActionListener(new ActionListener() {
+                    public void actionPerformed(ActionEvent e){
+                        JButton tile = (JButton) e.getSource();
+                        tile.setText
+                    }
+                });
             }
         }
     }
