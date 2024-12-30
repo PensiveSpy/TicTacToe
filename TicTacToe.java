@@ -2,8 +2,8 @@ import java.awt.*;
 import javax.swing.*;
 
 public class TicTacToe {
-    int boardWidth = 1920;
-    int boardHeight = 1080;
+    int boardWidth = 1000;
+    int boardHeight = 800;
 
     JFrame frame = new JFrame();
     JLabel textLabel = new JLabel();
@@ -25,7 +25,7 @@ public class TicTacToe {
 
         textPanel.setLayout(new BorderLayout());
         textPanel.add(textLabel);
-        frame.add(textPanel);
+        frame.add(textPanel, BorderLayout.NORTH);
 
 
     }
