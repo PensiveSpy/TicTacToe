@@ -1,11 +1,12 @@
 import java.awt.*;
+import java.awt.event.*;
 import javax.swing.*;
 
 public class TicTacToe {
     int boardWidth = 1000;
     int boardHeight = 800;
 
-    JFrame frame = new JFrame("Tic-Tac-Toe Game");
+    JFrame frame = new JFrame("Tic-Tac-Toe Four Game");
     JLabel textLabel = new JLabel();
     JPanel textPanel = new JPanel();
     JPanel boardPanel = new JPanel();
@@ -40,7 +41,17 @@ public class TicTacToe {
         frame.add(boardPanel);
 
         for (int r = 0; r < 4; r++){
-            for (int)
+            for (int c = 0; c < 4; c++){
+                JButton tile = new JButton();
+                board[r][c] = tile;
+                boardPanel.add(tile);
+
+                tile.setBackground(Color.darkGray);
+                tile.setForeground(Color.white);
+                tile.setFont(new Font("Times New Romans", Font.BOLD, 120));
+                tile.setFocusable(false);
+
+            }
         }
     }
 }
