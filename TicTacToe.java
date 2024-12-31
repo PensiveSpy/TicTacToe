@@ -17,6 +17,7 @@ public class TicTacToe {
     String playerY = "Y";
 
     boolean gameOver = false;
+    int turns = 0;
 
     String currentPlayer = playerX;
 
@@ -61,6 +62,7 @@ public class TicTacToe {
                         JButton tile = (JButton) e.getSource();
                         if (tile.getText() == ""){
                             tile.setText(currentPlayer);
+                            turns++;
                             checkWinner();
                             if (!gameOver){
                                 currentPlayer = currentPlayer == playerX ? playerO : (currentPlayer == playerO ? playerY : playerX);
@@ -106,6 +108,15 @@ public class TicTacToe {
             for (int i = 0; i < 4; i++){
                 setWinner(board[i][i]);
             }
+            gameOver = true;
+            return;
+        }
+
+        //Checking anti-diagonally for the winner
+        if (board[0][2].getText() == board[1][1].getText() && board[1][1].getText() == board[2][0].getText() && board[0][2].getText() != ""){
+            setWinner(board[0][2]);
+            setWinner(board[1][1]);
+            setWinner(board[2][0]);
             gameOver = true;
             return;
         }
