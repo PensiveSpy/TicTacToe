@@ -120,11 +120,28 @@ public class TicTacToe {
             gameOver = true;
             return;
         }
+
+        if (turns == 16){
+            for (int r = 0; r < 4; r++){
+                for (int c = 0; c < 4; c++){
+                    setTie(board[r][c]);
+
+                }
+            }
+
+            gameOver = true;
+        }
     }
     void setWinner(JButton tile){
         tile.setForeground(Color.GREEN);
         tile.setBackground(Color.GRAY);
 
         textLabel.setText(currentPlayer + " is the winner!");
+    }
+
+    void setTie(JButton tile){
+        tile.setForeground(Color.ORANGE);
+        tile.setBackground(Color.GRAY);
+        textLabel.setText("The game was a tie!");
     }
 }
