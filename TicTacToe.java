@@ -104,7 +104,7 @@ public class TicTacToe {
         }
 
         //Checking diagonally for winner
-        if (board[0][0].getText() == board[1][1].getText() && board[1][1].getText() == board[2][2].getText() && board[2][2].getText() == board[3][3].getText()&& board[0][0].getText() != ""){
+        if (board[0][0].getText() == board[1][1].getText() && board[1][1].getText() == board[2][2].getText() && board[2][2].getText() == board[3][3].getText() && board[0][0].getText() != ""){
             for (int i = 0; i < 4; i++){
                 setWinner(board[i][i]);
             }
@@ -113,10 +113,11 @@ public class TicTacToe {
         }
 
         //Checking anti-diagonally for the winner
-        if (board[0][2].getText() == board[1][1].getText() && board[1][1].getText() == board[2][0].getText() && board[0][2].getText() != ""){
-            setWinner(board[0][2]);
-            setWinner(board[1][1]);
-            setWinner(board[2][0]);
+        if (board[0][3].getText() == board[1][2].getText() && board[1][2].getText() == board[2][1].getText() && board[2][1].getText() == board[3][0].getText() && board[0][3].getText() != ""){
+            setWinner(board[0][3]);
+            setWinner(board[1][2]);
+            setWinner(board[2][1]);
+            setWinner(board[3][0]);
             gameOver = true;
             return;
         }
